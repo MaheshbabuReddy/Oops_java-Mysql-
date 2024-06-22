@@ -27,10 +27,12 @@ insert into  Customer values('1D3','Fridge' , 50000);
 insert into  Customer values('1D4','Smart Phone' , 20000); 
 
 select * from Customer;
+
 --Counting  no of Customers
 SELECT Customer_ID, COUNT(Customer_ID) AS no_customers
 FROM Customer 
 GROUP BY Customer_ID;
+
 --Joining 
 select * from Customer as c  FULL OUTER JOIN  Product as p on c.Customer_ID = P.Product_ID;
 rollback --Where it is used to Undo the changes
