@@ -1,0 +1,16 @@
+pipeline{
+    agent{label ,'Terraform'}
+    Stages{
+        stage(SCM){
+            steps{
+                git branch: 'master',url:'https://github.com/MaheshbabuReddy/Terraform-files.git'
+            }
+        }
+        stage(Terraform){
+            steps{
+                sh 'terraform init&&terraform validate'
+                sh 'terraform plan'
+            }
+        }
+    }
+}
