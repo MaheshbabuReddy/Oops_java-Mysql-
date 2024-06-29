@@ -35,4 +35,7 @@ GROUP BY Customer_ID;
 
 --Joining 
 select * from Customer as c  FULL OUTER JOIN  Product as p on c.Customer_ID = P.Product_ID;
+SHOW TABLES FROM mahesh;
+DROP TABLE Product;
+drop table Customer;
 rollback --Where it is used to Undo the changes
